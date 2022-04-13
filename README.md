@@ -1,4 +1,4 @@
-# Automatically Upload To GitHub repo from terminal ![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+# Automatically Upload To GitHub repo from terminal ![Awesome](https://awesome.re/badge-flat2.svg)
 
 - This implementation is geared towards being used as a function in a .bashrc file
 - This implements the GitHub API and some basic terminal commands to make automation smooth
