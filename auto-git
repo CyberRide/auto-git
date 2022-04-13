@@ -1,0 +1,130 @@
+#!/bin/bash
+echo "
+░█████╗░██╗░░░██╗████████╗░█████╗░░░░░░░░██████╗░██╗████████╗
+██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗░░░░░░██╔════╝░██║╚══██╔══╝
+███████║██║░░░██║░░░██║░░░██║░░██║█████╗██║░░██╗░██║░░░██║░░░
+██╔══██║██║░░░██║░░░██║░░░██║░░██║╚════╝██║░░╚██╗██║░░░██║░░░
+██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝░░░░░░╚██████╔╝██║░░░██║░░░
+╚═╝░░╚═╝░╚═════╝░░░░╚═╝░░░░╚════╝░░░░░░░░╚═════╝░╚═╝░░░╚═╝░░░
+Made by: CyberRide
+github: https://github.com/CyberRide
+
+[1]  Upload To New Repository
+[2]  Upload To Existing Repository              
+[3]  Update
+[4]  Exit
+		"| lolcat;
+echo -n -e "${BLUE}auto-git >>${NC}"| lolcat ;
+read choice 
+
+if [ $choice == 1 ]; then
+echo -e  "Navigate your desired project folder" | lolcat ;
+echo -e "e.g (Documents/Projects) :" | lolcat;
+cd /
+read filename
+cd /home/"$USER"/"$filename"
+if [ -e /home/"$USER"/"$filename" ]
+then
+echo -e "Initial README contents: " | lolcat;
+read me
+echo "# $me" >> README.md
+git init .
+git add README.md
+git add .
+echo -e "Initial commit message:" | lolcat;
+read commit
+git commit -m "$commit"
+git branch -M main
+echo -e "Enter Repository Name E.G username/example.git:" | lolcat;
+read repo
+git remote add origin git@github.com:"$repo"
+echo -e "Enter Personal Access Token :" | lolcat;
+read key
+git remote set-url origin https://"$key"@github.com/"$repo"
+# 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
+git push -u origin main
+
+echo -e "Upload SuccessFully"
+auto-git
+else
+echo /home/"$USER"/"$filename" not found
+auto-git
+fi
+fi
+if [ $choice == 2 ]; then
+echo -e  "Navigate your desired project folder" | lolcat ;
+echo -e "e.g (Documents/Projects) :" | lolcat;
+cd /
+read filename
+cd /home/"$USER"/"$filename"
+if [ -e /home/"$USER"/"$filename" ]
+then
+git init
+git add .
+echo -e "Enter Repository Name E.G username/example.git:" | lolcat;
+read repo
+git remote add origin git@github.com:"$repo"
+git branch -M main
+git push origin main
+auto-git
+else
+echo /home/"$USER"/"$filename" not found
+auto-git
+fi
+fi
+if [ $choice == 3 ]; then
+clear
+
+sudo chmod +x /etc/
+
+clear
+
+sudo chmod +x /usr/share/doc
+
+clear
+
+sudo rm -rf /usr/share/doc/auto-git
+
+clear
+
+cd /etc/
+
+clear
+
+sudo rm -rf /etc/auto-git
+
+clear
+
+mkdir auto-git
+
+clear
+
+cd auto-git
+
+clear
+
+git clone https://github.com/CyberRide/auto-git.git
+
+clear
+
+cd auto-git
+
+clear
+
+sudo chmod +x install
+
+clear
+
+./install
+
+clear
+fi
+if [ $choice == 4 ]; then
+echo "Are You Sure You Want To Exit auto-git? (y/n)"
+	read input
+    if [ "$input" = "y" ]; then
+    exit
+else
+auto-git   
+    fi
+fi
