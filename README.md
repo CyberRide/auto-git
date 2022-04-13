@@ -27,3 +27,4 @@
 # Future Additions
 
 - Storing of GitHub Personal Token for even less human input experience
+https://github.com/CyberRide/auto-git/blob/main/Screenshot%20at%202022-04-13%2014-50-43.png
