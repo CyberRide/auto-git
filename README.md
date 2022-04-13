@@ -22,7 +22,7 @@
 
 
 # Usage
-- Type On #auto-git Terminal 
+- Type On auto-git Terminal 
 
 # Future Additions
 
