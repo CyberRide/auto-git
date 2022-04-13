@@ -41,7 +41,7 @@ git remote add origin git@github.com:"$repo"
 echo -e "Enter Personal Access Token :" | lolcat;
 read key
 git remote set-url origin https://"$key"@github.com/"$repo"
-# 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
+
 git push -u origin main
 
 echo -e "Upload SuccessFully"
@@ -115,9 +115,7 @@ sudo chmod +x install
 
 clear
 
-./install
-
-clear
+sudo bash install
 fi
 if [ $choice == 4 ]; then
 echo "Are You Sure You Want To Exit auto-git? (y/n)"
